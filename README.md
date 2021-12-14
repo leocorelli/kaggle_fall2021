@@ -44,5 +44,8 @@ Ultimately, I am really proud of my performance in my first ever kaggle competit
 
 ## Simulation of my model's performance over 1000 trials, with randomly split training/test data every iteration:
 
+<p align="center"><img align="center" width="600px" src="assets/thousand_trial_simulation.png"></p>
+
+
 
 
