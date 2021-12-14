@@ -1,4 +1,5 @@
 from import_and_clean import accounts, zipcodes, subscriptions, tickets_all, train
+import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -58,6 +59,18 @@ def prepare_for_modeling(X, y):
 
 
 def train_and_predict(X_train, X_test, y_train, y_test):
+    '''Instantiates model, trains model, and scores model on unseen test set.
+
+
+    Args:
+        X_train (Numpy ndarray): scaled training data to train model
+        X_test (Numpy ndarray): scaled test data to generate predictions on
+        y_train (Numpy ndarray): training target labels
+        y_test (Numpy ndarray): test labels to compare predictions to
+
+    Returns:
+        auroc (float): calculated area under receiver operating characteristic curve
+    '''
     model = XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
               colsample_bynode=1, colsample_bytree=0.6392392088970968, gamma=0,
               learning_rate=0.14617846831708017, max_delta_step=0, max_depth=1,
@@ -77,5 +90,4 @@ if __name__ == '__main__':
     X, y = get_data()
     X_train, X_test, y_train, y_test = prepare_for_modeling(X,y)
     auroc = train_and_predict(X_train, X_test, y_train, y_test)
-    print(auroc)
-    
+    print('AUROC on test set:',np.round(auroc,3))
