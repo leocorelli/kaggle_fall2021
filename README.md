@@ -4,13 +4,13 @@
 *Duke University Fall 2021 AIPI 520 Class Kaggle Competition - 4th place out of 23 students*
 
 ## Installation
-1) Run ```$ git clone https://github.com/leocorelli/kaggle_fall2021.git```
-2) ```$ pip install -r requirements.txt```
+1) Clone repository: ```$ git clone https://github.com/leocorelli/kaggle_fall2021.git```
+2) Install requirements: ```$ pip install -r requirements.txt```
 
 *Please ensure that you have OpenMP installed - this is a requirement to use the XGBoostClassifier. You can use ```$ brew install libomp``` after having the homebrew package manager installed. You can download homebrew at https://brew.sh/*
 
 ## Get Started
-1) After completing all installation instructions, you can run my main file by running ```$ python3 kaggle_driver.py```
+1) After completing installation instructions, you can run my main file by running ```$ python3 kaggle_driver.py```
 
 
 ## Project Description: 
