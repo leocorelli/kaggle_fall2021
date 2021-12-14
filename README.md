@@ -26,7 +26,7 @@
 - Model selection: XGBoost (Extreme Gradient Boosting). One of the "state of the art" kaggle algorithms. XGBoost is a boosting ensemble model where the subsequent learner predicts the residual of the previous learner's prediction. The base estimator in this model is underfitted trees.
 - Cross-validation: performed using GridSearchCV from sklearn library. I checked a very wide range of hyperparameters for my XGBoost model and selected the ones that resulted in the best cross-validation performance. 
 
-## Results: 4th
+## Results: 4th place out of 23 total participants
 <p align="center"><img align="center" width="600px" src="assets/kaggle_leaderboard.png"></p>
 
 ## Analysis & Discussion: 
