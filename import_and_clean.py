@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
+
 def accounts():
     '''Imports, cleans, and returns account.csv as pandas DataFrame.
 
@@ -21,6 +22,7 @@ def accounts():
     accounts['billing.zip.code'] = accounts['billing.zip.code'].astype(str)
 
     return accounts
+
 
 def zipcodes():
     '''Imports, cleans, and returns zipcodes.csv as pandas DataFrame.
@@ -42,6 +44,7 @@ def zipcodes():
     zipcodes['Zipcode'] = zipcodes['Zipcode'].astype(str)
 
     return zipcodes
+
 
 def subscriptions():
     '''Imports, cleans, and returns subscriptions.csv as pandas DataFrame.
@@ -98,6 +101,7 @@ def subscriptions():
 
     return subscriptions
 
+
 def tickets_all():
     '''Imports, cleans, and returns tickets_all.csv as pandas DataFrame.
 
@@ -133,3 +137,15 @@ def tickets_all():
 
     return tickets_all
 
+
+def train():
+    '''Imports and returns account id's with associated training labels.
+    
+    Args:
+        (None)
+
+    Returns:
+        (Pandas DataFrame): train.csv
+    '''
+    train = pd.read_csv('./data/train.csv')
+    return train
