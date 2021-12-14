@@ -40,7 +40,7 @@ I tried building all different kinds of ensembles with both voting and stacking.
 
 ## Takeaways: 
 
-Ultimately, I am really proud of my performance in this competition in my first ever kaggle competition. The main thing that I am going to walk away from this experience with is that data-centric AI is absolutely the best approach to improving performance, particularly through clever/intelligent feature engineering.
+Ultimately, I am really proud of my performance in my first ever kaggle competition. The main thing that I am going to walk away from this experience with is that data-centric AI is absolutely the best approach to improving performance, particularly through clever/intelligent feature engineering.
 
 ## Simulation of my model's performance over 1000 trials, with randomly split training/test data every iteration:
 
