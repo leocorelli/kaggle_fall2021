@@ -34,11 +34,15 @@
 
 The two most important features to the model were features that encoded a time element: how recently somebody had purchased a subscription/how much somebody donated recently. I think the most important data-centric approach that I could have taken to improve my model's performance would have been engineering other features that encode this strong relationship between recent purchase activity and likelihood of purchasing a ticket for the upcoming feature. For example: has this person purchased a subscription in the last 2 years? Has this person purchased a subscription in the last 4 years? 
 
-I tried building all different kinds of ensembles with both voting and stacking.
+There was a very large class imbalance in the labeled data, with a 20:1 ratio of those who did not purchase a subscription (0) in the upcoming season to those who did (1). I implemented SMOTE (synthetic minority oversampling technique) to generate synthetic positive class observations to balance the training set, however this did not improve the performance of my model. I also tried undersampling the negative (0) class to balance the training set but this did not improve my model's performance either. Ultimately I left the class imbalance as is because it resulted in the best performing model. 
 
-After reviewing some other solutions that friends in my class have implemented, I would 
+I tried building all different kinds of ensembles with both voting and stacking. If I could do it again, I would implement an ensemble comprised of an adaboost with a random forest. Combining both bagging and boosting ensemble techniques together can greatly reduce the variance of the predictions and therefore "cheat" the bias-variance tradeoff -- resulting in more accurate predictions. Adaboost would have been particularly useful because it iteratively adjusts the weights of previously misclassified points. This would've been ideal for this application since ultimately my goal was to predict these cases that the model was most likely to misclassify since they are the minority class.
 
 ## Takeaways: 
+
+Ultimately, I am really proud of my performance in this competition in my first ever kaggle competition. The main thing that I am going to walk away from this experience with is that data-centric AI is absolutely the best approach to improving performance, particularly through clever/intelligent feature engineering.
+
+## Simulation of my model's performance over 1000 trials, with randomly split training/test data every iteration:
 
 
 
